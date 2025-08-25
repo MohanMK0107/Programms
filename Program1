@@ -1,0 +1,1 @@
+const Program1 = n => Array.from({length:n},(_,i)=>2*i+1);
