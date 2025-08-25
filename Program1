@@ -1,1 +1,23 @@
-const Program1 = n => Array.from({length:n},(_,i)=>2*i+1);
+class Calculator {
+  constructor(a,b) {
+    this.a = a;
+    this.b = b
+  }
+  calculate(operator){
+    switch(operator.toLowerCase()){
+      case "add":
+        return this.a + this.b
+      case "subtract":
+        return this.a - this.b
+      case "multiply":
+        return this.a * this.b
+      case "divide":
+        if(this.b===0){
+          return "number can't be divided by 0"
+        }
+        return this.a / this.b
+      default:
+        return "Invalid operator"
+    }
+  }  
+}
